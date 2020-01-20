@@ -4,6 +4,16 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+function onDeviceReady() {
+    alert('>>>>> deviceready');
+}
+
+
+alert('>>>>> window.device', window.device);
+alert('>>>>> window.cordova', window.cordova);
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
